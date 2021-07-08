@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Avon Micro</title>
+  <meta name="importmap-type" content="systemjs-importmap" />
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.1/lib/system/single-spa.min.js",
+        "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js",
+        "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.1.6/dist/vue-router.min.js",
+        "@vue/composition-api": "https://cdn.jsdelivr.net/npm/@vue/composition-api@1.0.0-rc.13/dist/vue-composition-api.prod.min.js",
+        "@storefront-ui/vue": "https://humeniukd.github.io/storyfront-ui/storefront-ui.umd.js",
+        "@storefront-ui/vue/": "https://humeniukd.github.io/storyfront-ui/",
+        "@avon/styleguide": "//localhost:9001/avon-styleguide.js",
+        "@avon/styleguide/": "//localhost:9001/",
+        "@avon/navbar": "//localhost:9002/js/app.js",
+        "@avon/navbar/": "//localhost:9002/js/",
+        "@avon/cart": "//localhost:9004/js/app.js",
+        "@avon/cart/": "//localhost:9004/js/",
+        "@avon/category": "//localhost:9003/js/app.js",
+        "@avon/category/": "//localhost:9003/js/",
+        "@avon/root-config": "//localhost:9000/avon-root-config.js",
+        "@avon/root-config/": "//localhost:9000/"
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides/dist/import-map-overrides.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.js"></script>
+  <link rel="stylesheet" href="https://humeniukd.github.io/storyfront-ui/storefront-ui.css">
+</head>
+<body>
+  <script>
+    System.import('@avon/styleguide');
+    System.import('@avon/root-config');
+  </script>
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+</body>
+</html>
